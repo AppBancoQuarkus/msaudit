@@ -1,7 +1,6 @@
 package com.nttd.service.impl;
 
 import java.util.ArrayList;
-//import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
