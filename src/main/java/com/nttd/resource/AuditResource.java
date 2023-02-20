@@ -1,10 +1,8 @@
 package com.nttd.resource;
 
-import java.util.List;
 
 import com.nttd.dto.AuditDto;
 import com.nttd.dto.ResponseDto;
-import com.nttd.entity.AuditEntity;
 import com.nttd.service.AuditService;
 
 import io.smallrye.mutiny.Uni;

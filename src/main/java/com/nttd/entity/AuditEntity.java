@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
-@MongoEntity(collection = "audit")
+@MongoEntity(collection = "BQHAUDIT")
 public class AuditEntity extends ReactivePanacheMongoEntity {
     private String application;
     private String applicationUser;
