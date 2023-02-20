@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class AuditDto {
+    private String idAuditoria;
     private String aplicacion;
     private String usuarioAplicacion;
     private String usuarioSesion;
