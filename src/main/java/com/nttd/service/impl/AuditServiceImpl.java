@@ -1,7 +1,9 @@
 package com.nttd.service.impl;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-//import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
@@ -78,8 +80,9 @@ public class AuditServiceImpl implements AuditService {
         audit.setApplication(auditDto.getAplicacion());
         audit.setApplicationUser(auditDto.getUsuarioAplicacion());
         audit.setSessionUser(auditDto.getUsuarioSesion());
-        audit.setTransactionCode(auditDto.getCodigoTransaccion());
-        audit.setTransactionDate(auditDto.getFechaTransaccion());
+        audit.setTransactionCode(String.valueOf(System.currentTimeMillis()));
+        DateFormat dateFormat = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm:ss z");
+        audit.setTransactionDate(dateFormat.format(new Date()));
         audit.setMessage(auditDto.getMensaje());
         audit.setRequest(auditDto.getRequest());
         audit.setResponse(auditDto.getResponse());

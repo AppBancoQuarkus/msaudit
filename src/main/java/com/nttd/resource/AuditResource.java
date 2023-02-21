@@ -1,6 +1,8 @@
 package com.nttd.resource;
 
 
+import org.eclipse.microprofile.openapi.annotations.Operation;
+
 import com.nttd.dto.AuditDto;
 import com.nttd.dto.ResponseDto;
 import com.nttd.service.AuditService;
@@ -23,11 +25,13 @@ public class AuditResource {
     AuditService auditService;
 
     @POST
+    @Operation(summary = "Registrar la auditoria",description = "Registrar la auditoria")
     public Uni<ResponseDto> add(AuditDto auditDto) {
         return auditService.add(auditDto);
     }
 
     @GET
+    @Operation(summary = "Obtener la auditoria total",description = "Obtienes la auditoria total")
     public Uni<ResponseDto> listAll() {
         return auditService.listAll();
     }
