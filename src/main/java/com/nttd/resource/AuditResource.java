@@ -1,6 +1,5 @@
 package com.nttd.resource;
 
-
 import org.eclipse.microprofile.openapi.annotations.Operation;
 
 import com.nttd.dto.AuditDto;
